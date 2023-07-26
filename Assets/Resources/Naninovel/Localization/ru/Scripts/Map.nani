@@ -1,0 +1,28 @@
+; English <en> to Russian <ru> localization document for `Map` naninovel script
+
+# c59dcb36
+; @choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+
+# 893e5cc6
+; @choice handler:ButtonArea button:MapButtons/GasStation pos:300,200 goto:GasStation
+
+# c59dcb36
+; @choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+
+# 893e5cc6
+; @choice handler:ButtonArea button:MapButtons/GasStation pos:300,200 goto:GasStation
+
+# c59dcb36
+; @choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+
+# 8f1e683d
+; @choice handler:ButtonArea button:MapButtons/Home pos:-300,-300 goto:Home
+
+# 893e5cc6
+; @choice handler:ButtonArea button:MapButtons/GasStation pos:300,200 goto:GasStation
+
+# c59dcb36
+; @choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+
+# f8e7ccdb
+; @choice handler:ButtonArea button:MapButtons/Home pos:-300,-300 goto:.EndQuest

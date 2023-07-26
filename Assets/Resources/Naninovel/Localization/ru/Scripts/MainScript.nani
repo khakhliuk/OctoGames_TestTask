@@ -1,0 +1,25 @@
+; English <en> to Russian <ru> localization document for `MainScript` naninovel script
+
+# bae034c6
+; Welcome to night city, stranger!
+Добро пожаловать в Город Греха. хд
+
+# 65b2922
+; Good to see new faces here.
+Приятно видеть новые лица.
+
+# be2587c1
+; How we should call you?
+Как нам тебя называть?
+
+# b6a65b7b
+; @input name summary:"Enter your name."
+@input name summary:"Введи своё имя."
+
+# 92b0403d
+; You are someone special I guess!
+Ты точно очень особенный!
+
+# 94225d46
+; Time for new journey. Let's check what's in the City. Check it on map.
+Время приключений. Давай посмотрим что там на карте города.

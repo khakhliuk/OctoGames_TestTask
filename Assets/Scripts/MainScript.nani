@@ -1,0 +1,21 @@
+# Start
+
+@back MainBg
+@bgm MainBgMusic
+Welcome to night city, stranger!
+Good to see new faces here.
+
+How we should call you?
+@input name summary:"Enter your name."
+@stop
+
+You are someone special I guess!
+Time for new journey. Let's check what's in the City. Check it on map.
+
+@set questLog="Check what's new in City."
+@showUI QuestLog
+@set questLine="start"
+@hidePrinter
+@goto Map.Start
+
+@stop

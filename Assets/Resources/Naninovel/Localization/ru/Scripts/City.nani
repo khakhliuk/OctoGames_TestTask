@@ -1,0 +1,117 @@
+; English <en> to Russian <ru> localization document for `City` naninovel script
+
+# e61fb1b8
+; Wassap handsome!
+Lucy: Привет красавчик!
+
+# e8437490
+; {name}: Sup, im {name}.
+{name}: Привет, меня зовут {name}.
+
+# 85553ed
+; Lucy: How are u doing?
+Lucy: Как делишки?
+
+# 195acbc8
+; {name}: Good, looking for a job to do.
+{name}: Хорошо, ищу себе работку.
+
+# 4651bd2d
+; Lucy: Got some work for you, go to gas station and talk to Rebecca!
+Lucy: Есть одно дельце для тебя, сходи на заправку и поговори с Ребеккой!
+
+# e64d4276
+; Lucy: Hey you again!
+Lucy: О, опять ты!
+
+# 3da1ab3e
+; Rebecca: Sorry, didnt tell you that im gonna leave Gas Station.
+Rebecca: Извини, не сказала тебе что уйду с заправки.
+
+# fc5e639c
+; {name}: I'v done what you asked for.
+{name}: Я сделал то что вы просили.
+
+# dc82f2ad
+; Lucy: Great job, boy!
+Lucy: Отличная работа, парень!
+
+# 6bde2fdf
+; Rebecca: Nice! Gimme that thing, im gonna hide it for safety.
+Rebecca: Отлично, отдай мне эту штуку, я запрячу её подальше.
+
+# a09f23d4
+; Lucy.Default: No! I should take it, i will hide it better!
+Lucy: Нет! Я заберу её и спрячу получше!
+
+# 7a383e64
+; Rebecca.Default: Nope, give it to me!
+Rebecca: Нет, отдай мне!
+
+# 96e8ce90
+; *Who you wanna give item to?*[skipInput]
+*Кому ты хочешь отдать предмет?*[skipInput]
+
+# de5271f7
+; @choice "Lucy" goto:.LucyItem
+@choice "Люси" goto:.LucyItem
+
+# 1c1b03da
+; @choice "Rebecca" goto:.RebeccaItem
+@choice "Ребекка" goto:.RebeccaItem
+
+# b603f701
+; @choice "Keep for myself" goto:.MyselfItem
+@choice "Оставить себе" goto:.MyselfItem
+
+# 9a178a7d
+; Lucy.Default: Yes, honey, great choice! See you next time.
+Lucy: Да, малыш, отличный выбор! Ещё увидимся.
+
+# 716d3280
+; Rebecca.Angry: No way you did it! Im leaving.
+Rebecca: Не может быть что ты это сделал! Я сваливаю.
+
+# 9eac02c8
+; {name}: Im sorry, but that's my decision.
+{name}: Извини, но это мой выбор.
+
+# dd13c37
+; Lucy.Angry: Bad choice, boy. You are losing alot.
+Lucy: Плохое решение, мальчик. Ты многое потерял.
+
+# 3be8d4d7
+; Rebecca.Default: Yes, good boy! See you soon, babe.
+Rebecca: Да, хороший мальчик! Скоро увидимся, малыш.
+
+# 9eac02c8
+; {name}: Im sorry, but that's my decision.
+{name}: Извини, но это мой выбор.
+
+# d4768435
+; Lucy.Angry: No way you gonna do this to us.
+Lucy: Не верю что ты поступишь так с нами.
+
+# d3929ba7
+; Rebecca.Angry: Nah, im leaving.
+Rebecca: Ну его, я сваливаю.
+
+# 9eac02c8
+; {name}: Im sorry, but that's my decision.
+{name}: Извините, но это моё решение.
+
+# 42ff8ffa
+; Lucy.Angry: Dont wanna see you now. Just leave please.
+Lucy: Не хочу тебя видеть, просто уйди.
+
+# b7cd6f8
+; Lucy.Sexy: Here you are, honey. I was waiting for you.
+Lucy: Вот ты где, красавчик. Я тебя ждала.
+
+# fc11a176
+; Lucy.Sexy: Take what you deserve...
+Lucy: Возьми то что заслужил...
+
+# 74061bec
+; I guess there's nothing for now.
+Кажется сейчас мне тут нечего делать.

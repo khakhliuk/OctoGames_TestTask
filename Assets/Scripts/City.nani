@@ -1,0 +1,127 @@
+@back CityBg
+@goto .Start if:questLine="start"
+@goto .MidGame if:questLine="girls"
+@goto .AfterGameAngry if:questLine="itemRebecca"||questLine="itemMyself"
+@goto .AfterGameSexy if:questLine="itemLucy"
+@goto .Else
+
+#Start
+@hideUI QuestLog
+@char Lucy.Default
+Wassap handsome!
+@hide Lucy
+
+@char Main.Default
+{name}: Sup, im {name}.
+@hide Main
+
+@char Lucy.Default
+Lucy: How are u doing?
+@hide Lucy
+
+@char Main.Default
+{name}: Good, looking for a job to do.
+@hide Main
+
+@char Lucy.Default
+Lucy: Got some work for you, go to gas station and talk to Rebecca!
+@hide Lucy
+
+@set questLine="started"
+@set questLog="Find Rebecca at Gas Station"
+@showUI QuestLog
+@showUI MapButton
+@stop
+
+
+# MidGame
+@hideUI QuestLog
+@char Lucy.Default
+Lucy: Hey you again!
+@char Rebecca.Default
+Rebecca: Sorry, didnt tell you that im gonna leave Gas Station.
+@hide Lucy
+@hide Rebecca
+
+@char Main.Default
+{name}: I'v done what you asked for.
+@hide Main
+
+@char Lucy.Default
+Lucy: Great job, boy!
+@char Rebecca.Default
+Rebecca: Nice! Gimme that thing, im gonna hide it for safety.
+
+Lucy.Default: No! I should take it, i will hide it better!
+Rebecca.Default: Nope, give it to me!
+*Who you wanna give item to?*[skipInput]
+
+@choice "Lucy" goto:.LucyItem
+@choice "Rebecca" goto:.RebeccaItem
+@choice "Keep for myself" goto:.MyselfItem
+@stop
+
+
+# LucyItem
+Lucy.Default: Yes, honey, great choice! See you next time.
+@hide Lucy
+Rebecca.Angry: No way you did it! Im leaving.
+@hide Rebecca
+
+@char Main.Default
+{name}: Im sorry, but that's my decision.
+@hide Main
+@set questLine="itemLucy"
+@goto Map
+@stop
+
+
+# RebeccaItem
+Lucy.Angry: Bad choice, boy. You are losing alot.
+@hide Lucy
+
+Rebecca.Default: Yes, good boy! See you soon, babe.
+@hide Rebecca
+
+@char Main.Default
+{name}: Im sorry, but that's my decision.
+@hide Main
+@set questLine="itemRebecca"
+@goto Map
+@stop
+
+
+# MyselfItem
+Lucy.Angry: No way you gonna do this to us.
+@hide Lucy
+Rebecca.Angry: Nah, im leaving.
+@hide Rebecca
+
+@char Main.Default
+{name}: Im sorry, but that's my decision.
+@hide Main
+@set questLine="itemMyself"
+@goto Map
+@stop
+
+
+#AfterGameAngry
+@char Lucy.Angry
+Lucy.Angry: Dont wanna see you now. Just leave please.
+@hide Lucy
+@showUI MapButton
+@stop
+
+#AfterGameSexy
+@char Lucy.Sexy
+Lucy.Sexy: Here you are, honey. I was waiting for you.
+Lucy.Sexy: Take what you deserve...
+@hide Lucy
+@showUI MapButton
+@stop
+
+
+# Else
+I guess there's nothing for now.
+@goto Map
+@stop

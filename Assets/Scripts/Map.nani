@@ -1,0 +1,31 @@
+@back MapBg
+@hideUI MapButton
+@hidePrinter
+@goto .GasQuest if:questLine="started"
+@goto .HomeQuest if:questLine="home"
+@goto .EndQuest
+
+# Start
+@back MapBg
+@choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+@stop
+
+
+# GasQuest
+@choice handler:ButtonArea button:MapButtons/GasStation pos:300,200 goto:GasStation
+@choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+@stop
+
+
+# HomeQuest
+@choice handler:ButtonArea button:MapButtons/GasStation pos:300,200 goto:GasStation
+@choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+@choice handler:ButtonArea button:MapButtons/Home pos:-300,-300 goto:Home
+@stop
+
+
+#EndQuest
+@choice handler:ButtonArea button:MapButtons/GasStation pos:300,200 goto:GasStation
+@choice handler:ButtonArea button:MapButtons/City pos:0,0 goto:City
+@choice handler:ButtonArea button:MapButtons/Home pos:-300,-300 goto:.EndQuest
+@stop

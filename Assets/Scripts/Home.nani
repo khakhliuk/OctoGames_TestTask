@@ -1,0 +1,29 @@
+@back HomeBg
+
+# Start
+
+@stopBgm MainBgMusic
+@char Main.Default
+@hideUI QuestLog
+{name}: Here's my computer, I need to upload files.
+
+@bgm MouseClicking
+{name}: Cmon, why is it so slow??
+@hide Main
+
+System: 99%...
+System: 100%
+
+@char Main.Default
+{name}: Nice! I should talk to Rebecca now.
+@hide Main
+
+@set questLine="rebecca"
+@set questLog="Find Rebecca. (Gas Station)"
+@showUI QuestLog
+
+@stopBgm MouseClicking
+@bgm SecondPartBgMusic
+@showUI MapButton
+
+@stop

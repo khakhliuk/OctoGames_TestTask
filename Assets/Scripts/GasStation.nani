@@ -1,0 +1,80 @@
+@back GasStationBg
+@goto .Start if:questLine="started"
+@goto .MidGame if:questLine="rebecca"
+@goto .AfterGameAngry if:questLine="itemLucy"||questLine="itemMyself"
+@goto .AfterGameSexy if:questLine="itemRebecca"
+@goto .Else
+
+#Start
+@hideUI QuestLog
+@char Rebecca.Default
+Rebecca: Sup, mate! Wanna blow some work today?
+@hide Rebecca
+
+@char Main.Default
+{name}: Yeah, that's why im here!
+@hide Main
+
+@char Rebecca.Default
+Rebecca: Here is stolen flash drive, try to open it with your phone.
+@hide Rebecca
+
+@hidePrinter
+@minigame
+
+@char Main.Default
+{name}: Nah, i need something stronger.
+@hide Main
+
+@char Rebecca.Default
+Rebecca: Here, take it, hack and upload files.
+@hide Rebecca
+
+@char Main.Default
+{name}: Got it.
+@hide Main
+
+@char Rebecca.Default
+Rebecca: Good luck!
+@hide Rebecca
+
+@set questLine="home"
+@set questLog="Get Home and use computer"
+@showUI QuestLog
+@showUI MapButton
+@stop
+
+
+# MidGame
+@hideUI QuestLog
+@char Main.Default
+{name}: Shit, can't see her nowhere.
+{name}: Maybe Lucy can tell me something.
+@hide Main
+
+@set questLine="girls"
+@set questLog="Get back to Lucy."
+@showUI QuestLog
+@showUI MapButton
+@stop
+
+
+#AfterGameAngry
+Rebecca.Angry: Dont wanna see you now. Just leave please.
+@hide Rebecca
+@showUI MapButton
+@stop
+
+
+#AfterGameSexy
+Rebecca.Sexy: Here's my boy. I was waiting for you.
+Rebecca.Sexy: Got something for you...
+@hide Rebecca
+@showUI MapButton
+@stop
+
+
+# Else
+I guess there's nothing for now.
+@goto Map
+@stop
